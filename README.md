@@ -1,2 +1,2 @@
 # CRM
-a basic models
+a basic model
