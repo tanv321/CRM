@@ -1,2 +1,2 @@
 # CRM
-a basic model
+a basic mode
