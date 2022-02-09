@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.">
+    <title>Document</title>
+    <style>
+    .lead{
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:6px;
+        padding-right:10px;
+        marging-top:10px;
+        background-color: #f6f6f6;
+        width:100%;
+    }
+    </style>
+</head>
+<body>      
+        <h1> This is all of our leads </h1>
+        {% for lead in leads%}
+            <div class="lead">
+               {% comment %} {{ lead.last_name }} {{ lead.first_name }} Age: {{ lead.age }} {% endcomment %}
+                <a href="/leads/{{ lead.pk }}/"> {{ lead.last_name }} {{ lead.first_name }}</a> Age: {{ lead.age }} {#this line <a href="/leads/{{ lead.pk }} names </a> will make it so to hyperlink the names/#}
+
+            </div>
+        {% endfor %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.">
+    <title>Document</title>
+</head>
+<body>      
+        <h1> Hello World </h1>
+        <p> This is the third page </p>
+        {# {{ name }} {#to access variable from our defined context in the views.py file#}
+        <ul> {# <ul> stands for unordered list so if we list a few items it wont number them, but if we use <ol> (ordered list) then the items would be numbers from 1 to n #}
+            {% for lead in leads %} 
+                <li>{{ lead }}</li> {# put bullet in front of the lead b/c its ul, if it was under ol then we would have numbers #}
+            {% endfor %}  
+        </ul>
+</body>
+</html>

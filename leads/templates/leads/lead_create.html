@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.">
+    <title>Document</title>
+   
+</head>
+<body>      
+    <a href="/leads">Go back to leads</a>
+     <hr /> {#makes a horizontal line on page #}
+    <h1> create a new lead </h1>
+    <form method = "post" action = "."> {#wrap the body with <form>.. as we want to submit information then use it we use post... get method would be better fetching and searching...action is the url you want to submit data to#}
+        {% csrf_token %} {# we must use csrf token when we use method = "post" for security reasons #}
+        {{ form }} {#we could do form.as_p to have them in a paragraph format #}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

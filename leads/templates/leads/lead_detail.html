@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.">
+    <title>Document</title>
+    <style>
+    .lead{
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:6px;
+        padding-right:10px;
+        marging-top:10px;
+        background-color: #f6f6f6;
+        width:100%;
+    }
+    </style>
+</head>
+<body>      
+    <a href="/leads">Go back to leads</a>
+     <hr /> {#makes a horizontal line on page #}
+    <h1> This is the detail of {{ lead.first_name  }} </h1>
+    <p> This person age: {{ lead.age }}</p>
+</body>
+</html>
