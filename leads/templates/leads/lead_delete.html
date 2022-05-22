@@ -2,7 +2,7 @@
 {% block content %}   
     <a href="{% url 'leads:lead-list' %}">Go back to leads </a>
      <hr /> {#makes a horizontal line on page #}
-    <h1> create a new lead </h1>
+    <h1> Are you sure you want to delete this lead: {{lead.first_name }} {{ lead.last_name }}</h1>
     <form method = "post"> {#wrap the body with <form>.. as we want to submit information then use it we use post... get method would be better fetching and searching...action is the url you want to submit data to#}
         {% csrf_token %} {# we must use csrf token when we use method = "post" for security reasons #}
         {{ form.as_p }} {#lead_create will know what 'form' is b\c we identified it in our view.py.lead_create method as a context to render here ....we could do form.as_p to have them in a paragraph format #}

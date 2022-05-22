@@ -1,2 +1,0 @@
-# CRM
-a basic mode

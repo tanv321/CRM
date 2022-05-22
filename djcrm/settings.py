@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
+DEBUG = config("DEBUG")
             #List of host this project is allowed to be hosted on 
 ALLOWED_HOSTS = []
 
@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #3rd party
+    'crispy_forms',
+    'crispy_tailwind',
+    #local apps
     'leads',
+    'agents',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +128,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
         #URL that will host all your static file
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [ #list of path to recognize as static files
+    BASE_DIR / "static"
+]
+STATIC_ROOT = "static_root" #root folder of all of our statck files
 
 AUTH_USER_MODEL = 'leads.User' #tell django we have our own custom model
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" #this will tell django how to send email or what sender to use. 
+LOGIN_REDIRECT_URL = "/leads"
+LOGIN_URL = "/login"
+LOGOUT_REDIRECT_URL = "/"
+
+CRISPY_ALLOWED_TEMPLATE_PACK = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
