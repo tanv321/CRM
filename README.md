@@ -1,14 +1,14 @@
 # CRM
-Django based CRM.
-To keep track of the relations between different entities and their role within the buisness. 
+Django based CRM. <br />
+To keep track of the relations between different entities and their role within the buisness. <br />
 
-To get the server running:
--Create a virtual env 
--Install all required packages via command: pip install -r requirements.txt
--create a .env file inside the root directory
--The .env file should contain a SECRET_KEY and DEBUG as shown below:
-SECRET_KEY = 0000
-DEBUG = True
--use the following command: python manage.py migrate
--start your program via command: python manage.py runserver
+To get the server running:<br />
+-Create a virtual env <br />
+-Install all required packages via command: pip install -r requirements.txt<br />
+-create a .env file inside the root directory<br />
+-The .env file should contain a SECRET_KEY and DEBUG as shown below:<br />
+SECRET_KEY = 0000<br />
+DEBUG = True<br />
+-use the following command: python manage.py migrate<br />
+-start your program via command: python manage.py runserver<br />
 
